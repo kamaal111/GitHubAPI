@@ -14,7 +14,7 @@ public struct GitHubIssue: Codable, Hashable, Identifiable {
     public let number: Int
     public let title: String
     public let user: GitHubUser
-    public let labels: [GitHubIssueLabel]
+    public let labels: [GitHubIssueLabel]?
     public let rawState: String
     public let locked: Bool
     public let assignee: GitHubUser?
@@ -34,7 +34,7 @@ public struct GitHubIssue: Codable, Hashable, Identifiable {
         number: Int,
         title: String,
         user: GitHubUser,
-        labels: [GitHubIssueLabel],
+        labels: [GitHubIssueLabel]?,
         rawState: String,
         locked: Bool,
         assignee: GitHubUser?,
