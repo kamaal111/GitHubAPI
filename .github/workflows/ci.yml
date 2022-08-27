@@ -1,0 +1,14 @@
+name: CI
+on: push
+jobs:
+  Test:
+    name: Test
+    timeout-minutes: 10
+    runs-on: macos-latest
+    steps:
+      - name: Git - Checkout
+        uses: actions/checkout@v2
+
+      - name: Test
+        run: |
+          swift test
