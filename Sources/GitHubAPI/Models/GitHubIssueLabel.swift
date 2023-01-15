@@ -11,7 +11,7 @@ public struct GitHubIssueLabel: Codable, Hashable, Identifiable {
     public let id: Int
     public let url: URL
     public let name: String
-    public let description: String
+    public let description: String?
     public let color: String
     public let isDefault: Bool
 
